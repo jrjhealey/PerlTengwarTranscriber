@@ -1,0 +1,386 @@
+#<Perl-TMF>	TengwarScript <=> Dan Smith encoding conversion, ©2006 Jellby
+#r2t	174
+#t2r	205
+#cs	1
+#pat	conv	next	prev
+\Ttinco	1		
+\Tparma	q		
+\Tcalma	a		
+\Tquesse	z		
+\Tando	2		
+\Tumbar	w		
+\Tanga	s		
+\Tungwe	x		
+\Tthuule	3		
+\Tformen	e		
+\Taha	d		
+\Thwestasindarinwa	o		
+\Thwesta	c		
+\Tanto	4		
+\Tampa	r		
+\Tanca	f		
+\Tunque	v		
+\Tnuumen	5		
+\Tmalta	t		
+\Tnoldo	g		
+\Tnwalme	b		
+\Toore	6		
+\Tvala	y		
+\Tanna	h		
+\Tvilya	n		
+\Textendedtinco	!		
+\Textendedparma	Q		
+\Textendedcalma	A		
+\Textendedquesse	Z		
+\Textendedando	@		
+\Textendedumbar	W		
+\Textendedanga	S		
+\Textendedungwe	X		
+\Troomen	7		
+\Tarda	u		
+\Tlambe	j		
+\Talda	m		
+\Tsilmenuquerna	i		
+\Tsilme	8		
+\Tessenuquerna	,		
+\Tesse	k		
+\Thyarmen	9		
+\Thalla	½		
+\Tyanta	l		
+\Tuure	.		
+\Tosse	]		
+\Ttelco	`		
+\Taara	~		
+\Tlefthook	}		\\T(extended)?(tinco|parma|roomen|arda|silmenuquerna|telco|halla)(\\TT[^\\]+)*
+\Tlefthook	|		
+\Trighthook	¥		\\T(lambe|alda)(\\TT[^\\]+)*
+\Trighthook	+		
+\TTdotbelow	Ë		\\T(telco|aara|halla|roomen|arda)(\\TT[^\\]+)*
+\TTdotbelow	Ê		\\T((extended)?tinco|(extended)?parma|silmenuquerna)(\\TT[^\\]+)*
+\TTdotbelow	É		\\T(hyarmen|silme|esse|thuule|formen|(extended)?calma|(extended)?quesse|oore|vala|anna|vilya|essenuquerna|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTdotbelow	È		
+\TTlefttwodotsbelow	´		\\T(lambe|alda)(\\TT[^\\]+)*
+\TTlefttwodotsbelow	Ï		\\T(telco|aara|halla|roomen|arda)(\\TT[^\\]+)*
+\TTlefttwodotsbelow	Î		\\T((extended)?tinco|(extended)?parma|silmenuquerna)(\\TT[^\\]+)*
+\TTlefttwodotsbelow	Í		\\T(hyarmen|silme|esse|thuule|formen|oore|vala|anna|vilya|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTlefttwodotsbelow	Ì		
+\TTtwodotsbelow	´		\\T(lambe|alda)(\\TT[^\\]+)*
+\TTtwodotsbelow	Ï		\\T(telco|aara|halla|roomen|arda)(\\TT[^\\]+)*
+\TTtwodotsbelow	Î		\\T((extended)?tinco|(extended)?parma|silmenuquerna)(\\TT[^\\]+)*
+\TTtwodotsbelow	Í		\\T(hyarmen|silme|esse|thuule|formen|oore|vala|anna|vilya|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTtwodotsbelow	Ì		
+\TTthreedotsbelow	Ó		\\T(telco|aara|halla|roomen|arda)(\\TT[^\\]+)*
+\TTthreedotsbelow	Ò		\\T((extended)?tinco|(extended)?parma|silmenuquerna)(\\TT[^\\]+)*
+\TTthreedotsbelow	Ñ		\\T(hyarmen|silme|esse|thuule|formen|oore|vala|anna|vilya|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTthreedotsbelow	Ð		
+\TTdoubleacutebelow	‚		\\T(lambe|alda)(\\TT[^\\]+)*
+\TTdoubleacutebelow	†		\\T(telco|aara|halla)(\\TT[^\\]+)*
+\TTdoubleacutebelow	…		\\T((extended)?tinco|(extended)?parma|roomen|arda|silmenuquerna)(\\TT[^\\]+)*
+\TTdoubleacutebelow	„		\\T(hyarmen|silme|esse|thuule|formen|(extended)?calma|(extended)?quesse|oore|vala|anna|vilya|essenuquerna|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTdoubleacutebelow	ƒ		
+\TTrightcurlbelow	ç		\\T(telco|aara|halla|roomen|arda)(\\TT[^\\]+)*
+\TTrightcurlbelow	æ		\\T((extended)?tinco|(extended)?parma|silmenuquerna)(\\TT[^\\]+)*
+\TTrightcurlbelow	å		\\T(hyarmen|silme|esse|thuule|formen|(extended)?calma|(extended)?quesse|oore|vala|anna|vilya|yanta|uure|osse|aha|hwesta(sindarinwa)?)(\\TT[^\\]+)*
+\TTrightcurlbelow	ä		
+\TTleftcurlbelow	”		\\T(telco|aara|halla)(\\TT[^\\]+)*
+\TTleftcurlbelow	“		\\T((extended)?tinco|(extended)?parma|roomen|arda|silmenuquerna)(\\TT[^\\]+)*
+\TTleftcurlbelow	’		\\T(hyarmen|silme|esse|thuule|formen|(extended)?calma|(extended)?quesse|oore|vala|anna|vilya|yanta|uure|osse|aha|hwesta(sindarinwa)?)(\\TT[^\\]+)*
+\TTleftcurlbelow	‘		
+\TTverticalbarbelow	ÿ		\\T(telco|aara|halla)(\\TT[^\\]+)*
+\TTverticalbarbelow	þ		\\T((extended)?tinco|(extended)?parma|roomen|arda|silmenuquerna)(\\TT[^\\]+)*
+\TTverticalbarbelow	ý		\\T(hyarmen|silme|esse|thuule|formen|(extended)?calma|(extended)?quesse|oore|vala|anna|vilya|essenuquerna|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTverticalbarbelow	ü		
+\TTdot	G		\\T(thuule|formen|extendedtinco|extendedparma)(\\TT[^\\]+)*
+\TTdot	B		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTdot	T		\\T(tinco|parma|(extended)?calma|(extended)?quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTdot	%		
+\TTacute	F		\\Thyarmen(\\TT[^\\]+)*
+\TTacute	V		\\T(telco|aara|silme|esse|halla)(\\TT[^\\]+)*
+\TTacute	R		\\T(thuule|formen|(extended)?tinco|(extended)?parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTacute	$		
+\TTthreedots	D		\\T(thuule|formen|extendedtinco|extendedparma)(\\TT[^\\]+)*
+\TTthreedots	C		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTthreedots	E		\\T(tinco|parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTthreedots	#		
+\TTrightcurl	H		\\Thyarmen(\\TT[^\\]+)*
+\TTrightcurl	N		\\T(telco|aara|silme|esse|halla)(\\TT[^\\]+)*
+\TTrightcurl	Y		\\T(thuule|formen|(extended)?tinco|(extended)?parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTrightcurl	^		
+\TTleftcurl	J		\\Thyarmen(\\TT[^\\]+)*
+\TTleftcurl	M		\\T(telco|aara|silme|esse|halla)(\\TT[^\\]+)*
+\TTleftcurl	U		\\T(thuule|formen|(extended)?tinco|(extended)?parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTleftcurl	&		
+\TTcaron	Ú		\\T(thuule|formen|extendedtinco|extendedparma)(\\TT[^\\]+)*
+\TTcaron	Û		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTcaron	Ù		\\T(tinco|parma|(extended)?calma|(extended)?quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTcaron	Ø		
+\TTdoubleacute	FV		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTdoubleacute	RF		\\T(thuule|formen|(extended)?tinco|(extended)?parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTdoubleacute	$R		
+\TTdoublerightcurl	HN		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTdoublerightcurl	YH		\\T(thuule|formen|(extended)?tinco|(extended)?parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTdoublerightcurl	^H		
+\TTdoubleleftcurl	JM		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTdoubleleftcurl	UJ		\\T(thuule|formen|(extended)?tinco|(extended)?parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTdoubleleftcurl	&J		
+\TTtwodots	Ö		\\T(thuule|formen|extendedtinco|extendedparma)(\\TT[^\\]+)*
+\TTtwodots	×		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTtwodots	Õ		\\T(tinco|parma|(extended)?calma|(extended)?quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse|aha|hwesta)(\\TT[^\\]+)*
+\TTtwodots	Ô		
+\TTtilde	é		\\T(extendedcalma|extendedquesse|aha|hwesta(sindarinwa)?)(\\TT[^\\]+)*
+\TTtilde	ë		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTtilde	ê		\\T(thuule|formen|(extended)?tinco|(extended)?parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTtilde	è		
+\TTlefttilde	é		\\T(extendedcalma|extendedquesse|aha|hwesta(sindarinwa)?)(\\TT[^\\]+)*
+\TTlefttilde	ë		\\T(telco|aara|hyarmen|silme|esse|halla)(\\TT[^\\]+)*
+\TTlefttilde	ê		\\T(thuule|formen|(extended)?tinco|(extended)?parma|calma|quesse|oore|vala|anna|vilya|roomen|arda|(silme|esse)nuquerna|yanta|uure|osse)(\\TT[^\\]+)*
+\TTlefttilde	è		
+\TTnasalizer	P		\\T(extended)?(ando|umbar|anga|ungwe|anto|ampa|anca|unque|nuumen|malta|noldo|nwalme|lambe|alda)(\\TT[^\\]+)*
+\TTnasalizer	p		
+\TTdoubler	°		\\T(lambe|alda)(\\TT[^\\]+)*
+\TTdoubler	:		\\T(extended)?(ando|umbar|anga|ungwe|anto|ampa|anca|unque|nuumen|malta|noldo|nwalme|lambe|alda)(\\TT[^\\]+)*
+\TTdoubler	;		
+\Tzero	ð		
+\Tone	ñ		
+\Ttwo	ò		
+\Tthree	ó		
+\Tfour	ô		
+\Tfive	õ		
+\Tsix	ö		
+\Tseven	÷		
+\Teight	ø		
+\Tnine	ù		
+\Tten	ú		
+\Televen	û		
+\TTdecimal	G		\\Teight
+\TTdecimal	B		\\T(ten|eleven)
+\TTdecimal	%		\\T(two|three|six|nine)
+\TTdecimal	T		
+\TTduodecimal	È		\\T(two|three|five|nine)
+\TTduodecimal	É		
+\TTleastsignificant	˜		\\T(two|three|five|nine)
+\TTleastsignificant	™		
+\Tcentereddot	=		
+\Tcolon	-		
+\Tcenteredtilde	\		
+\Tcenteredlongtilde	Â		
+\Texclamation	Á		
+\Tquestion	À		
+\Tromanquestion	®		
+\Tromanexclamation	Ç		
+\Tromanperiod	º		
+\Tromancomma	¹		
+\Tromansemicolon	Ã		
+\Tromanquoteleft	±		
+\Tromanquoteright	²		
+\Tromanparenleft	¼		
+\Tromanparenright	½		
+\Ts	 		
+ 			
+#===
+ 	\Ts		
+1	\Ttinco		
+q	\Tparma		
+a	\Tcalma		
+z	\Tquesse		
+2	\Tando		
+w	\Tumbar		
+s	\Tanga		
+x	\Tungwe		
+3	\Tthuule		
+e	\Tformen		
+d	\Taha		
+c	\Thwesta		
+4	\Tanto		
+r	\Tampa		
+f	\Tanca		
+v	\Tunque		
+5	\Tnuumen		
+t	\Tmalta		
+g	\Tnoldo		
+b	\Tnwalme		
+6	\Toore		
+y	\Tvala		
+h	\Tanna		
+n	\Tvilya		
+!	\Textendedtinco		
+Q	\Textendedparma		
+A	\Textendedcalma		
+Z	\Textendedquesse		
+@	\Textendedando		
+W	\Textendedumbar		
+S	\Textendedanga		
+X	\Textendedungwe		
+7	\Troomen		
+u	\Tarda		
+j	\Tlambe		
+m	\Talda		
+8	\Tsilme		
+i	\Tsilmenuquerna		
+k	\Tesse		
+,	\Tessenuquerna		
+9	\Thyarmen		
+o	\Thwestasindarinwa		
+½	\Thalla		
+l	\Tyanta		
+.	\Tuure		
+]	\Tosse		
+`	\Ttelco		
+~	\Taara		
+ð	\Tzero		
+ñ	\Tone		
+ò	\Ttwo		
+ó	\Tthree		
+ô	\Tfour		
+õ	\Tfive		
+ö	\Tsix		
+÷	\Tseven		
+ø	\Teight		
+ù	\Tnine		
+ú	\Tten		
+û	\Televen		
+À	\Tquestion		
+Á	\Texclamation		
+\	\Tcenteredtilde		
+Â	\Tcenteredlongtilde		
+=	\Tcentereddot		
+-	\Tcolon		
+®	\Tromanquestion		
+Ç	\Tromanexclamation		
+º	\Tromanperiod		
+¹	\Tromancomma		
+Ã	\Tromansemicolon		
+±	\Tromanquoteleft		
+²	\Tromanquoteright		
+¼	\Tromanparenleft		
+½	\Tromanparenright		
+|	\Tlefthook		
+}	\Tlefthook		
++	\Trighthook		
+¡	\Trighthook		
+Å	\Trighthook		
+£	\Trighthook		
+¥	\Trighthook		
+¢	\Trighthook		
+Æ	\Trighthook		
+_	\Trighthook		
+#	\TTthreedots		
+E	\TTthreedots		
+D	\TTthreedots		
+C	\TTthreedots		
+%	\TTdecimal		[ðñòóôõö÷øùúû]
+T	\TTdecimal		[ðñòóôõö÷øùúû]
+G	\TTdecimal		[ðñòóôõö÷øùúû]
+B	\TTdecimal		[ðñòóôõö÷øùúû]
+%	\TTdot		
+T	\TTdot		
+G	\TTdot		
+B	\TTdot		
+$R	\TTdoubleacute		
+$F	\TTdoubleacute		
+$V	\TTdoubleacute		
+R$	\TTdoubleacute		
+RF	\TTdoubleacute		
+RV	\TTdoubleacute		
+F$	\TTdoubleacute		
+FR	\TTdoubleacute		
+FV	\TTdoubleacute		
+V$	\TTdoubleacute		
+VR	\TTdoubleacute		
+VF	\TTdoubleacute		
+$	\TTacute		
+R	\TTacute		
+F	\TTacute		
+V	\TTacute		
+^Y	\TTdoublerightcurl		
+^H	\TTdoublerightcurl		
+^N	\TTdoublerightcurl		
+Y^	\TTdoublerightcurl		
+YH	\TTdoublerightcurl		
+YN	\TTdoublerightcurl		
+H^	\TTdoublerightcurl		
+HY	\TTdoublerightcurl		
+HN	\TTdoublerightcurl		
+N^	\TTdoublerightcurl		
+NY	\TTdoublerightcurl		
+NH	\TTdoublerightcurl		
+^	\TTrightcurl		
+Y	\TTrightcurl		
+H	\TTrightcurl		
+N	\TTrightcurl		
+&U	\TTdoubleleftcurl		
+&J	\TTdoubleleftcurl		
+&M	\TTdoubleleftcurl		
+U&	\TTdoubleleftcurl		
+UJ	\TTdoubleleftcurl		
+UM	\TTdoubleleftcurl		
+J&	\TTdoubleleftcurl		
+JU	\TTdoubleleftcurl		
+JM	\TTdoubleleftcurl		
+M&	\TTdoubleleftcurl		
+MU	\TTdoubleleftcurl		
+MJ	\TTdoubleleftcurl		
+&	\TTleftcurl		
+U	\TTleftcurl		
+J	\TTleftcurl		
+M	\TTleftcurl		
+Ø	\TTcaron		
+Ù	\TTcaron		
+Ú	\TTcaron		
+Û	\TTcaron		
+Ô	\TTtwodots		
+Õ	\TTtwodots		
+Ö	\TTtwodots		
+×	\TTtwodots		
+Ð	\TTthreedotsbelow		
+Ñ	\TTthreedotsbelow		
+Ò	\TTthreedotsbelow		
+Ó	\TTthreedotsbelow		
+Ì	\TTtwodotsbelow		
+Í	\TTtwodotsbelow		
+Î	\TTtwodotsbelow		
+Ï	\TTtwodotsbelow		
+´	\TTtwodotsbelow		
+ƒ	\TTdoubleacutebelow		
+„	\TTdoubleacutebelow		
+…	\TTdoubleacutebelow		
+†	\TTdoubleacutebelow		
+‚	\TTdoubleacutebelow		
+ä	\TTrightcurlbelow		
+å	\TTrightcurlbelow		
+æ	\TTrightcurlbelow		
+ç	\TTrightcurlbelow		
+‘	\TTleftcurlbelow		
+’	\TTleftcurlbelow		
+“	\TTleftcurlbelow		
+”	\TTleftcurlbelow		
+È	\TTduodecimal		[ðñòóôõö÷øùúû]
+É	\TTduodecimal		[ðñòóôõö÷øùúû]
+Ê	\TTduodecimal		[ðñòóôõö÷øùúû]
+Ë	\TTduodecimal		[ðñòóôõö÷øùúû]
+È	\TTdotbelow		
+É	\TTdotbelow		
+Ê	\TTdotbelow		
+Ë	\TTdotbelow		
+ü	\TTverticalbarbelow		
+ý	\TTverticalbarbelow		
+þ	\TTverticalbarbelow		
+ÿ	\TTverticalbarbelow		
+è	\TTtilde		
+é	\TTtilde		
+ê	\TTtilde		
+ë	\TTtilde		
+P	\TTnasalizer		
+p	\TTnasalizer		
+[	\TTnasalizer		
+{	\TTnasalizer		
+:	\TTdoubler		
+;	\TTdoubler		
+°	\TTdoubler		
+'	\TTdoubler		
+"	\TTdoubler		
+˜	\TTleastsignificant		
+™	\TTleastsignificant		
+š	\TTleastsignificant		
+›	\TTleastsignificant		
+#===

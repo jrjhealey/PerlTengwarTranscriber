@@ -1,0 +1,218 @@
+#<Perl-TMF>	Quenya mode with options, ©2006 Jellby
+#r2t	123
+#t2r	72
+#cs	0
+#OPTIONS:
+#1*	Hook for s after t, p, c
+#pat	conv	next	prev
+ 	\Ts		
+ai	\Tyanta\TTthreedots		
+oi	\Tyanta\TTrightcurl		
+ui	\Tyanta\TTleftcurl		
+au	\Tuure\TTthreedots		
+eu	\Tuure\TTacute		
+iu	\Tuure\TTdot		
+a	\Ttelco\TTthreedots		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+a	\TTthreedots		
+δ	\Ttelco\TTthreedots		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+δ	\TTthreedots		
+α	\Taara\TTthreedots		
+aa	\Taara\TTthreedots		
+e	\Ttelco\TTacute		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+e	\TTacute		
+λ	\Ttelco\TTacute		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+λ	\TTacute		
+ι	\Taara\TTacute		
+ee	\Taara\TTacute		
+i	\Ttelco\TTdot		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+i	\TTdot		
+ο	\Ttelco\TTdot		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+ο	\TTdot		
+ν	\Taara\TTdot		
+ii	\Taara\TTdot		
+o	\Ttelco\TTrightcurl		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+o	\TTrightcurl		
+φ	\Ttelco\TTrightcurl		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+φ	\TTrightcurl		
+σ	\Taara\TTrightcurl		
+oo	\Taara\TTrightcurl		
+u	\Ttelco\TTleftcurl		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+u	\TTleftcurl		
+ό	\Ttelco\TTleftcurl		([aeioαινσϊδλοφ\W\d_]|[^q][uό])
+ό	\TTleftcurl		
+ϊ	\Taara\TTleftcurl		
+uu	\Taara\TTleftcurl		
+c	\Tcalma		
+k	\Tcalma		
+x	\Tcalma\Tsilme	([aou]i|[ae]u|iu)	
+xa	\Tcalma\TTthreedots\Tlefthook			+1
+xδ	\Tcalma\TTthreedots\Tlefthook			+1
+xe	\Tcalma\TTacute\Tlefthook			+1
+xι	\Tcalma\TTacute\Tlefthook			+1
+xi	\Tcalma\TTdot\Tlefthook			+1
+xο	\Tcalma\TTdot\Tlefthook			+1
+xo	\Tcalma\TTrightcurl\Tlefthook			+1
+xφ	\Tcalma\TTrightcurl\Tlefthook			+1
+xu	\Tcalma\TTleftcurl\Tlefthook			+1
+xό	\Tcalma\TTleftcurl\Tlefthook			+1
+x	\Tcalma\Tsilmenuquerna	[aeiouδλοφό]	
+x	\Tcalma\Tsilme		
+f	\Tformen		
+hw	\Thwesta		
+h	\Thyarmen		
+ld	\Talda		
+ll	\Tlambe\TTdoubler		
+l	\Tlambe		
+mb	\Tumbar		
+mp	\Tampa		
+mm	\Tmalta\TTdoubler		
+m	\Tmalta		
+nc	\Tanca		
+nd	\Tando		
+ngw	\Tungwe		
+ng	\Tanga		
+nqu	\Tunque		
+nt	\Tanto		
+nw	\Tnwalme		[\W\d_]
+nw	\Tnuumen\Tvilya		
+nn	\Tnuumen\TTdoubler		
+n	\Tnuumen		
+pp	\Tparma\TTdoubler		
+p	\Tparma		
+qu	\Tquesse		
+qw	\Tquesse		
+q	\Tquesse		
+rd	\Tarda		
+r	\Troomen	[aeiouαινσϊδλοφόy]	
+r	\Toore		
+ss	\Tesse	([aou]i|[ae]u|iu)	
+ss	\Tessenuquerna	[aeiouδλοφό]	
+ss	\Tesse		
+s	\Tsilme	([aou]i|[ae]u|iu)	
+sa	\TTthreedots\Tlefthook		[ck]	+1
+sa	\TTthreedots\Trighthook		[tp]	+1
+sδ	\TTthreedots\Tlefthook		[ck]	+1
+sδ	\TTthreedots\Trighthook		[tp]	+1
+se	\TTacute\Tlefthook		[ck]	+1
+se	\TTacute\Trighthook		[tp]	+1
+sι	\TTacute\Tlefthook		[ck]	+1
+sι	\TTacute\Trighthook		[tp]	+1
+si	\TTdot\Tlefthook		[ck]	+1
+si	\TTdot\Trighthook		[tp]	+1
+sο	\TTdot\Tlefthook		[ck]	+1
+sο	\TTdot\Trighthook		[tp]	+1
+so	\TTrightcurl\Tlefthook		[ck]	+1
+so	\TTrightcurl\Trighthook		[tp]	+1
+sφ	\TTrightcurl\Tlefthook		[ck]	+1
+sφ	\TTrightcurl\Trighthook		[tp]	+1
+su	\TTleftcurl\Tlefthook		[ck]	+1
+su	\TTleftcurl\Trighthook		[tp]	+1
+sό	\TTleftcurl\Tlefthook		[ck]	+1
+sό	\TTleftcurl\Trighthook		[tp]	+1
+s	\Tsilmenuquerna	[aeiouδλοφό]	
+s	\Tsilme		
+tt	\Ttinco\TTdoubler		
+t	\Ttinco		
+v	\Tvala		
+w	\Tvilya		
+y	\Tanna\TTtwodotsbelow		[aeiouαινσϊδλοφό\W\d_]
+y	\TTtwodotsbelow		
+-			
+'			
+,	\Ts\Tcentereddot		
+;	\Ts\Tcentereddot		
+.	\Ts\Tcolon		
+:	\Ts\Tcolon		
+!	\Ts\Texclamation		
+?	\Ts\Tquestion		
+(	\Tparenthesis		
+)	\Tparenthesis		
+"			
+#===
+\Ttelco			
+\Tanna			
+\Tyanta\TTthreedots	ai		
+\Tyanta\TTrightcurl	oi		
+\Tyanta\TTleftcurl	ui		
+\Tuure\TTthreedots	au		
+\Tuure\TTacute	eu		
+\Tuure\TTdot	iu		
+\TTthreedots\Tlefthook	sa		
+\TTacute\Tlefthook	se		
+\TTdot\Tlefthook	si		
+\TTrightcurl\Tlefthook	so		
+\TTleftcurl\Tlefthook	su		
+\TTthreedots\Trighthook	sa		
+\TTacute\Trighthook	se		
+\TTdot\Trighthook	si		
+\TTrightcurl\Trighthook	so		
+\TTleftcurl\Trighthook	su		
+\TTthreedots	a		
+\TTacute	e		
+\TTdot	i		
+\TTrightcurl	o		
+\TTleftcurl	u		
+\TTtwodotsbelow	y		
+\Taara\TTthreedots	α		
+\Taara\TTacute	ι		
+\Taara\TTdot	ν		
+\Taara\TTrightcurl	σ		
+\Taara\TTleftcurl	ϊ		
+\Ttinco\TTdoubler	tt		
+\Ttinco	t		
+\Tparma\TTdoubler	pp		
+\Tparma	p		
+\Tcalma\Tsilmenuquerna	x		
+\Tcalma\Tsilme	x		
+\Tcalma	c		
+\Tquesse	qu		
+\Tando	nd		
+\Tumbar	mb		
+\Tanga	ng		
+\Tungwe	ngw		
+\Tformen	f		
+\Thwesta	hw		
+\Tanto	nt		
+\Tampa	mp		
+\Tanca	nc		
+\Tunque	nqu		
+\Tnuumen\TTdoubler	nn		
+\Tnuumen	n		
+\Tmalta\TTdoubler	mm		
+\Tmalta	m		
+\Tnwalme	nw		
+\Toore	r		
+\Tvala	v		
+\Tvilya	w		
+\Troomen	r		
+\Tarda	rd		
+\Tlambe\TTdoubler	ll		
+\Tlambe	l		
+\Talda	ld		
+\Tsilmenuquerna	s		
+\Tsilme	s		
+\Tessenuquerna	ss		
+\Tesse	ss		
+\Thyarmen	h		
+\Ts\Tcentereddot	,		
+\Ts\Tcolon	.		
+\Ts\Texclamation	!		
+\Ts\Tquestion	?		
+\Tparenthesis	(		\\Ts
+\Tparenthesis	)		
+\Ts	 	[\W\d]	
+#===
+#digit	dec	duodec	least
+00	\Tzero\TTdecimal	\Tzero\TTduodecimal	\Tzero\TTleastsignificant
+01	\Tone\TTdecimal	\Tone\TTduodecimal	\Tone\TTleastsignificant
+02	\Ttwo\TTdecimal	\Ttwo\TTduodecimal	\Ttwo\TTleastsignificant
+03	\Tthree\TTdecimal	\Tthree\TTduodecimal	\Tthree\TTleastsignificant
+04	\Tfour\TTdecimal	\Tfour\TTduodecimal	\Tfour\TTleastsignificant
+05	\Tfive\TTdecimal	\Tfive\TTduodecimal	\Tfive\TTleastsignificant
+06	\Tsix\TTdecimal	\Tsix\TTduodecimal	\Tsix\TTleastsignificant
+07	\Tseven\TTdecimal	\Tseven\TTduodecimal	\Tseven\TTleastsignificant
+08	\Teight\TTdecimal	\Teight\TTduodecimal	\Teight\TTleastsignificant
+09	\Tnine\TTdecimal	\Tnine\TTduodecimal	\Tnine\TTleastsignificant
+10		\Tten\TTduodecimal	\Tten\TTleastsignificant
+11		\Televen\TTduodecimal	\Televen\TTleastsignificant
+#===

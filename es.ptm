@@ -1,0 +1,433 @@
+#<Perl-TMF>	Spanish mode with various options, ©2006 Jellby
+#r2t	252
+#t2r	150
+#cs	0
+#OPTIONS:
+#1*	Vowels as tehtar
+#2*	Dipthongs and tripthongs
+#3*	Double tehtar for accents
+#4	Vertical bars for accents
+#5*	Tilde for preceding nasal
+#6*	Hook for final s
+#7*	Use silme nuquerna
+#8	Basic pronunciation mode
+#9	Roman punctuation
+#pat	conv	next	prev
+i	\Tanna	[aáeéoóuú]	[iíú\W\d_]	+1+2-8
+i	\Taara	[aáeéoóuú]	[iíú\W\d_]	-1+2-8
+i	\TTtwodotsbelow	[aáeéoóuú]	([^uü]|[gq]u)	+1+2-8
+i	\TTtwodots	[aáeéoóuú]	([^uü]|[gq]u)	-1+2-8
+i	\TTtwodots		([aáeéoó]|i[uú])	-1+2-8
+i	\Tanna	h?[aáeéoóuú]	[iíú\W\d_]h?	+1+2+8
+i	\Taara	h?[aáeéoóuú]	[iíú\W\d_]h?	-1+2+8
+i	\TTtwodotsbelow	h?[aáeéoóuú]	([^uü]|[gq]u)	+1+2+8
+i	\TTtwodots	h?[aáeéoóuú]	([^uü]|[gq]u)	-1+2+8
+i	\TTtwodots		([aáeéoó]|i[uú])h?	-1+2+8
+y	\TTtwodots	[^aáeéiíoóuú]	([aáeéoó]|i[uú])	-1+2
+u	\Tvala	([aáeéiíoó]|y[^aáeéiíoóuú])	[íuú\W\d_]	+1+2-8
+u	\Tuure	([aáeéiíoó]|y[^aáeéiíoóuú])	[íuú\W\d_]	-1+2-8
+u	\TTtilde	([aáeéiíoó]|y[^aáeéiíoóuú])	[^i]	+2-8
+u	\TTtilde		([aáeéoó]|(ü|[^gq]u)[ií])	-1+2-8
+u	\Tvala	h?([aáeéiíoó]|y[^aáeéiíoóuú])	[íuú\W\d_]h?	+1+2+8
+u	\Tuure	h?([aáeéiíoó]|y[^aáeéiíoóuú])	[íuú\W\d_]h?	-1+2+8
+u	\TTtilde	h?([aáeéiíoó]|y[^aáeéiíoóuú])	[^i]	+2+8
+u	\TTtilde		([aáeéoó]|(ü|[^gq]u)[ií])h?	-1+2+8
+ü	\TTtilde	[eéií]		+2
+ahi	\Tyanta\TTthreedots			+1+2+8
+áhi	\Tyanta\TTverticalbarbelow\TTthreedots			+1+2+4+8
+áhi	\Taara\TTthreedots\Tyanta			+1+2-4+8
+ahu	\Tuure\TTthreedots			+1+2+8
+áhu	\Tuure\TTverticalbarbelow\TTthreedots			+1+2+4+8
+áhu	\Taara\TTthreedots\Tuure			+1+2-4+8
+ehi	\Tyanta\TTacute			+1+2+8
+éhi	\Tyanta\TTdoubleacute			+1+2+3+8
+éhi	\Tyanta\TTverticalbarbelow\TTacute			+1+2+4+8
+éhi	\Taara\TTacute\Tyanta			+1+2-3-4+8
+ehu	\Tuure\TTacute			+1+2+8
+éhu	\Tuure\TTdoubleacute			+1+2+3+8
+éhu	\Tuure\TTverticalbarbelow\TTacute			+1+2+4+8
+éhu	\Taara\TTacute\Tuure			+1+2-3-4+8
+ihu	\Tuure\TTdot		(ü|[^gq]u)	+1+2+8
+íhu	\Tuure\TTverticalbarbelow\TTdot		(ü|[^gq]u)	+1+2+4+8
+íhu	\Taara\TTdot\Tuure		(ü|[^gq]u)	+1+2-4+8
+ohi	\Tyanta\TTrightcurl			+1+2+8
+óhi	\Tyanta\TTdoublerightcurl			+1+2+3+8
+óhi	\Tyanta\TTverticalbarbelow\TTrightcurl			+1+2+4+8
+óhi	\Taara\TTrightcurl\Tyanta			+1+2-3-4+8
+ohu	\Tuure\TTrightcurl			+1+2+8
+óhu	\Tuure\TTdoublerightcurl			+1+2+3+8
+óhu	\Tuure\TTverticalbarbelow\TTrightcurl			+1+2+4+8
+óhu	\Taara\TTrightcurl\Tuure			+1+2-3-4+8
+uhi	\Tyanta\TTleftcurl		i	+1+2+8
+úhi	\Tyanta\TTdoubleleftcurl		i	+1+2+3+8
+úhi	\Tyanta\TTverticalbarbelow\TTleftcurl		i	+1+2+4+8
+úhi	\Taara\TTleftcurl\Tyanta		i	+1+2-3-4+8
+ai	\Tyanta\TTthreedots			+1+2
+ái	\Tyanta\TTverticalbarbelow\TTthreedots			+1+2+4
+ái	\Taara\TTthreedots\Tyanta			+1+2-4
+ay	\Tyanta\TTthreedots	[^aáeéiíoóuú]		+1+2
+áy	\Tyanta\TTverticalbarbelow\TTthreedots	[^aeiou]		+1+2+4
+áy	\Taara\TTthreedots\Tyanta	[^aeiou]		+1+2-4
+au	\Tuure\TTthreedots			+1+2
+áu	\Tuure\TTverticalbarbelow\TTthreedots			+1+2+4
+áu	\Taara\TTthreedots\Tuure			+1+2-4
+a	\Ttelco\TTthreedots		[aáeéiíoóuú\W\d_]	+1-2-8
+a	\Ttelco\TTthreedots		([aáeéíoóú\W\d_]|[aáeéoóü][iu]|[^gq]ui|iu)	+1+2-8
+a	\Ttelco\TTthreedots		[aáeéiíoóuú\W\d_]h?	+1-2+8
+a	\Ttelco\TTthreedots		([aáeéíoóú\W\d_]|[aáeéoóü][iu]|[^gq]ui|iu)h?	+1+2+8
+a	\TTthreedots			+1
+á	\Taara\TTthreedots		[aeiou\W\d_]	+1-2+4-8
+á	\Taara\TTthreedots		([aeo\W\d_]|([aeoü]|[^gq]u)i|[aeio]u)	+1+2+4-8
+á	\Taara\TTthreedots		[aeiou\W\d_]h?	+1-2+4+8
+á	\Taara\TTthreedots		([aeo\W\d_]|([aeoü]|[^gq]u)i|[aeio]u)h?	+1+2+4+8
+á	\TTverticalbarbelow\TTthreedots			+1+4
+á	\Taara\TTthreedots			+1-4
+ei	\Tyanta\TTacute			+1+2
+éi	\Tyanta\TTdoubleacute			+1+2+3
+éi	\Tyanta\TTverticalbarbelow\TTacute			+1+2+4
+éi	\Taara\TTacute\Tyanta			+1+2-3-4
+ey	\Tyanta\TTacute	[^aáeéiíoóuú]		+1+2
+éy	\Tyanta\TTdoubleacute	[^aeiou]		+1+2+3
+éy	\Tyanta\TTverticalbarbelow\TTacute	[^aeiou]		+1+2+4
+éy	\Taara\TTacute\Tyanta	[^aeiou]		+1+2-3-4
+eu	\Tuure\TTacute			+1+2
+éu	\Tuure\TTdoubleacute			+1+2+3
+éu	\Tuure\TTverticalbarbelow\TTacute			+1+2+4
+éu	\Taara\TTacute\Tuure			+1+2-3-4
+e	\Ttelco\TTacute		([aáeéiíoóúü\W\d_]|[^gq]u)	+1-2-8
+e	\Ttelco\TTacute		([aáeéíoóú\W\d_]|[aáeéoóü][iu]|[^gq]ui|iu)	+1+2-8
+e	\Ttelco\TTacute		([aáeéiíoóúü\W\d_]|[^gq]u)h?	+1-2+8
+e	\Ttelco\TTacute		([aáeéíoóú\W\d_]|[aáeéoóü][iu]|[^gq]ui|iu)h?	+1+2+8
+e	\TTacute			+1
+é	\Taara\TTacute		([aeioü\W\d_]|[^gq]u)	+1-2-8
+é	\Taara\TTacute		([aeo\W\d_]|([aeoü]|[^gq]u)i|[aeio]u)	+1+2-8
+é	\Taara\TTacute		([aeioü\W\d_]|[^gq]u)h?	+1-2+8
+é	\Taara\TTacute		([aeo\W\d_]|([aeoü]|[^gq]u)i|[aeio]u)h?	+1+2+8
+é	\TTdoubleacute			+1+3
+é	\TTverticalbarbelow\TTacute			+1+4
+é	\Taara\TTacute			+1-3-4
+iu	\Tuure\TTdot		(ü|[^gq]u)	+1+2
+íu	\Tuure\TTverticalbarbelow\TTdot		(ü|[^gq]u)	+1+2+4
+íu	\Taara\TTdot\Tuure		(ü|[^gq]u)	+1+2-4
+i	\Ttelco\TTdot		([aáeéiíoóúü\W\d_]|[^gq]u)	+1-2-8
+i	\Ttelco\TTdot		[iíú\W\d_]	+1+2-8
+i	\Ttelco\TTdot		([aáeéiíoóúü\W\d_]|[^gq]u)h?	+1-2+8
+i	\Ttelco\TTdot		[iíú\W\d_]h?	+1+2+8
+i	\TTdot			+1
+í	\Taara\TTdot		([aeioü\W\d_]|[^gq]u)	+1-2+4-8
+í	\Taara\TTdot		[aeio\W\d]	+1+2+4-8
+í	\Taara\TTdot		([aeioü\W\d_]|[^gq]u)h?	+1-2+4+8
+í	\Taara\TTdot		[aeio\W\d]h?	+1+2+4+8
+í	\TTverticalbarbelow\TTdot			+1+4
+í	\Taara\TTdot			+1-4
+oi	\Tyanta\TTrightcurl			+1+2
+ói	\Tyanta\TTdoublerightcurl			+1+2+3
+ói	\Tyanta\TTverticalbarbelow\TTrightcurl			+1+2+4
+ói	\Taara\TTrightcurl\Tyanta			+1+2-3-4
+oy	\Tyanta\TTrightcurl	[^aáeéiíoóuú]		+1+2
+óy	\Tyanta\TTdoublerightcurl	[^aeiou]		+1+2+3
+óy	\Tyanta\TTverticalbarbelow\TTrightcurl	[^aeiou]		+1+2+4
+óy	\Taara\TTrightcurl\Tyanta	[^aeiou]		+1+2-3-4
+ou	\Tuure\TTrightcurl			+1+2
+óu	\Tuure\TTdoublerightcurl			+1+2+3
+óu	\Tuure\TTverticalbarbelow\TTrightcurl			+1+2+4
+óu	\Taara\TTrightcurl\Tuure			+1+2-3-4
+o	\Ttelco\TTrightcurl		[aáeéiíoóuú\W\d_]	+1-2-8
+o	\Ttelco\TTrightcurl		([aáeéíoóú\W\d_]|[aáeéoóü][iu]|[^gq]ui|iu)	+1+2-8
+o	\Ttelco\TTrightcurl		[aáeéiíoóuú\W\d_]h?	+1-2+8
+o	\Ttelco\TTrightcurl		([aáeéíoóú\W\d_]|[aáeéoóü][iu]|[^gq]ui|iu)h?	+1+2+8
+o	\TTrightcurl			+1
+ó	\Taara\TTrightcurl		[aeiou\W\d_]	+1-2-8
+ó	\Taara\TTrightcurl		([aeo\W\d_]|([aeoü]|[^gq]u)i|[aeio]u)	+1+2-8
+ó	\Taara\TTrightcurl		[aeiou\W\d_]h?	+1-2+8
+ó	\Taara\TTrightcurl		([aeo\W\d_]|([aeoü]|[^gq]u)i|[aeio]u)h?	+1+2+8
+ó	\TTdoublerightcurl			+1+3
+ó	\TTverticalbarbelow\TTrightcurl			+1+4
+ó	\Taara\TTrightcurl			+1-3-4
+ui	\Tyanta\TTleftcurl		i	+1+2
+úi	\Tyanta\TTdoubleleftcurl		i	+1+2+3
+úi	\Tyanta\TTverticalbarbelow\TTleftcurl		i	+1+2+4
+úi	\Taara\TTleftcurl\Tyanta		i	+1+2-3-4
+uy	\Tyanta\TTleftcurl	[^aáeéiíoóuú]	i	+1+2
+úy	\Tyanta\TTdoubleleftcurl	[^aeiou]	i	+1+2+3
+úy	\Tyanta\TTverticalbarbelow\TTleftcurl	[^aeiou]	i	+1+2+4
+úy	\Taara\TTleftcurl\Tyanta	[^aeiou]	i	+1+2-3-4
+u	\Ttelco\TTleftcurl		[aáeéiíoóuú\W\d_]	+1-2-8
+u	\Ttelco\TTleftcurl		[íuú\W\d_]	+1+2-8
+u	\Ttelco\TTleftcurl		[aáeéiíoóuú\W\d_]h?	+1-2+8
+u	\Ttelco\TTleftcurl		[íuú\W\d_]h?	+1+2+8
+u	\TTleftcurl			+1
+ü	\TTleftcurl			+1-2
+ú	\Taara\TTleftcurl		[aeiou\W\d_]	+1-2-8
+ú	\Taara\TTleftcurl		([aeou\W\d_]|([aeoü]|[^gq]u)i)	+1+2-8
+ú	\Taara\TTleftcurl		[aeiou\W\d_]h?	+1-2+8
+ú	\Taara\TTleftcurl		([aeou\W\d_]|([aeoü]|[^gq]u)i)h?	+1+2+8
+ú	\TTdoubleleftcurl			+1+3
+ú	\TTverticalbarbelow\TTleftcurl			+1+4
+ú	\Taara\TTleftcurl			+1-3-4
+a	\Tvilya			-1
+á	\Tvilya\TTdoubler			-1
+e	\Tyanta			-1
+é	\Tyanta\TTdoubler			-1
+i	\Ttelco			-1
+í	\Ttelco\TTdoubler			-1
+o	\Tanna			-1
+ó	\Tanna\TTdoubler			-1
+u	\Tvala			-1
+ü	\Tvala			-1
+ú	\Tvala\TTdoubler			-1
+ch	\Tcalma		
+c	\Tthuule	[eéií]	
+c	\Tquesse		
+gu	\Tungwe	[eéií]	
+g	\Thwesta	[eéií]	
+g	\Tungwe		
+ll	\Talda		
+l	\Tlambe		
+mb	\Tumbar\TTnasalizer			+5
+nv	\Tumbar\TTnasalizer			+8
+mp	\Tparma\TTnasalizer			+5
+m	\Tmalta		
+nd	\Tando\TTnasalizer			+5
+nch	\Tcalma\TTnasalizer			+5
+nc	\Tquesse\TTnasalizer	[^eéií]		+5
+ngu	\Tungwe\TTnasalizer	[eéií]		+5
+ng	\Tnuumen\Thwesta	[eéií]		+5
+ng	\Tungwe\TTnasalizer			+5
+nt	\Ttinco\TTnasalizer			+5
+nqu	\Tquesse\TTnasalizer	[eéií]		+5
+nq	\Tquesse\TTnasalizer			+5
+n	\Tnuumen		
+qu	\Tquesse	[eéií]	
+q	\Tquesse		
+rr	\Troomen		
+r	\Toore		[bcdfgkpt]	+8
+r	\Toore		[aáeéiíoóuú]
+r	\Troomen		
+s	\Trighthook	[\W\d_]		+6
+s	\Tsilmenuquerna	(i[aáeéoóuú]|u([aáeéiíoó]|y[^aáeéiíoóuú]))		-1+2+7
+s	\Tsilme	([aáeéoó][iu]|y[^aáeéiíoóuú])		+1+2+7
+s	\Tsilme	(i?á|í)		+1-4+7
+s	\Tsilme	i?[éóú]		+1-3-4+7
+s	\Tsilmenuquerna	[aáeéiíoóuú]		+1+7
+s	\Tsilme		
+y	\Tanca	[aáeéiíoóuú]	
+y	\Ttelco\TTcaron		[aáeéiíoóuú\W\d_]	+1-2-8
+y	\Ttelco\TTcaron		[iíú\W\d_]	+1+2-8
+y	\Ttelco\TTdot		[aáeéiíoóuú\W\d_]h?	+1-2+8
+y	\Ttelco\TTdot		[iíú\W\d_]h?	+1+2+8
+y	\TTcaron			+1-8
+y	\Taara			-1-8
+y	\TTdot			+1+8
+y	\Ttelco			-1+8
+b	\Tumbar		
+d	\Tando		
+f	\Tformen		
+h	\Thyarmen			-8
+h				+8
+j	\Thwesta		
+k	\Tquesse		
+ñ	\Tnoldo		
+p	\Tparma		
+t	\Ttinco		
+v	\Tampa			-8
+v	\Tumbar			+8
+w	\Tvala			+1
+w	\Tuure			-1
+x	\Tquesse\Tlefthook		
+z	\Tthuule		
+ 	\Ts		
+---	\Tromanparenleft	\w		+9
+---	\Tromanparenright		\w	+9
+---	\Tparenthesis			-9
+--	\Ts\Tcenteredtilde\Ts		
+-	\Tcenteredtilde		
+,	\Tromancomma			+9
+.	\Tromanperiod			+9
+;	\Tromansemicolon			+9
+:	\Tcolon			+9
+!	\Tromanexclamation			+9
+?	\Tromanquestion			+9
+	\Tromanparenleft			+9
+)	\Tromanparenright			+9
+«	\Tromandblquoteleft			+9
+»	\Tromandblquoteright			+9
+,	\Ts\Tcentereddot			-9
+...	\Ts\Tcenteredlongtilde			-9
+.	\Ts\Tcolon\Tcenteredlongtilde			-9
+;	\Ts\Tcolon\Tcentereddot			-9
+:	\Ts\Tcolon\Tcolon			-9
+!	\Ts\Texclamation			-9
+?	\Ts\Tquestion			-9
+(	\Tparenthesis			-9
+)	\Tparenthesis			-9
+«				-9
+»				-9
+¿			
+¡			
+"			
+#===
+\Taara\TTthreedots	á		
+\Taara\TTacute	é		
+\Taara\TTdot	í		
+\Taara\TTrightcurl	ó		
+\Taara\TTleftcurl	ú		
+\Taara	i	\\T(vilya|yanta|anna|vala)		-1
+\Taara	y			-1
+\Talda	ll		
+\Tampa	v		
+\Tanca	y		
+\Tando\TTnasalizer	nd		
+\Tando	d		
+\Tanna	hi			+1+8
+\Tanna	y			+1
+\Tanna\TTdoubler	ó			-1
+\Tanna	o			-1
+\Tarda	rr		
+\Tcalma\TTnasalizer	nch		
+\Tcalma	ch		
+\Tcenteredtilde	-		
+\Tcolon	:		
+\Tformen	f		
+\Thwesta	g	(\\T(yanta|uure))?(\\TTverticalbarbelow)?(\\Taara)?\\TT((double)?acute|dot|(left)?twodotsbelow)		+1
+\Thwesta	g	\\T(yanta|telco|Ttwodots)		-1
+\Thwesta	j		
+\Thyarmen	h		
+\Tlambe	l		
+\Tmalta	m		
+\Tnoldo	ñ		
+\Tnuumen	n		
+\Toore	r		
+\Tparenthesis	(		(\\Ts|[\W\d ])
+\Tparenthesis	)		
+\Tparma\TTnasalizer	mp		
+\Tparma	p		
+\Tquesse\Tlefthook	x		
+\Tquesse\TTnasalizer	nqu	(\\T(yanta|uure))?(\\TTverticalbarbelow)?(\\Taara)?\\TT((double)?acute|dot|(left)?twodotsbelow)		+1
+\Tquesse\TTnasalizer	nk	\\TTcaron		+1
+\Tquesse\TTnasalizer	nqu	\\T(yanta|telco|Ttwodots)		-1
+\Tquesse\TTnasalizer	nk	\\Taara		-1
+\Tquesse\TTnasalizer	nc		
+\Tquesse	qu	(\\T(yanta|uure))?(\\TTverticalbarbelow)?(\\Taara)?\\TT((double)?acute|dot|(left)?twodotsbelow)		+1
+\Tquesse	k	\\TTcaron		+1
+\Tquesse	qu	\\T(yanta|telco|Ttwodots)		-1
+\Tquesse	k	\\Taara		-1
+\Tquesse	c		
+\Tromancomma	,		
+\Tromanexclamation	!		
+\Tromanparenleft	(		
+\Tromanparenright	)		
+\Tromanperiod	.		
+\Tromanquestion	?		
+\Tromandblquoteleft	«		
+\Tromandblquoteright	»		
+\Tromansemicolon	;		
+\Troomen	rr	\\T(T(threedots|(double)?acute|dot|(double)?(right|left)curl|(left)?(tilde|twodotsbelow|verticalbarbelow))|aara)	\\T(T(threedots|(double)?acute|dot|(double)?(right|left)curl)|yanta|uure)	+1
+\Troomen	rr	\\T(vilya|yanta|telco|anna|vala|Ttwodots|Ttilde)	\\T(vilya|yanta|telco|anna|vala|Ttwodots|Ttilde)	-1
+\Troomen	r		
+\Trighthook	s		
+\Tsilmenuquerna	s		
+\Tsilme	s		
+\Ts\Tcentereddot	,		
+\Ts\Tcenteredlongtilde	...		
+\Ts\Tcenteredtilde\Ts	---		
+\Ts\Tcolon\Tcentereddot	;			-9
+\Ts\Tcolon\Tcenteredlongtilde	.			-9
+\Ts\Tcolon\Tcolon	:			-9
+\Ts\Texclamation	!		
+\Ts\Tquestion	?		
+\Ts	 	[\W\d]	
+\Ttelco				+1
+\Ttelco\TTdoubler	í			-1
+\Ttelco	i			-1
+\Tthuule	c	(\\T(yanta|uure))?(\\TTverticalbarbelow)?(\\Taara)?\\TT((double)?acute|dot|(left)?twodotsbelow)		+1
+\Tthuule	c	\\T(yanta|telco|Ttwodots)		-1
+\Tthuule	z		
+\Ttinco\TTnasalizer	nt		
+\Ttinco	t		
+\Tumbar\TTnasalizer	mb		
+\Tumbar	b		
+\Tungwe\TTnasalizer	ngu	(\\T(yanta|uure))?(\\TTverticalbarbelow)?(\\Taara)?\\TT((double)?acute|dot|(left)?twodotsbelow)		+1
+\Tungwe\TTnasalizer	ngu	\\T(yanta|telco|Ttwodots)		-1
+\Tungwe\TTnasalizer	ng		
+\Tungwe	gu	(\\T(yanta|uure))?(\\TTverticalbarbelow)?(\\Taara)?\\TT((double)?acute|dot|(left)?twodotsbelow)		+1
+\Tungwe	gu	\\T(yanta|telco|Ttwodots)		-1
+\Tungwe	g		
+\Tuure\TTthreedots	au			+1
+\Tuure\TTverticalbarbelow\TTthreedots	áu			+1
+\Tuure\TTacute	eu			+1
+\Tuure\TTdoubleacute	éu			+1
+\Tuure\TTverticalbarbelow\TTacute	éu			+1
+\Tuure\TTdot	iu			+1
+\Tuure\TTverticalbarbelow\TTdot	íu			+1
+\Tuure\TTrightcurl	ou			+1
+\Tuure\TTdoublerightcurl	óu			+1
+\Tuure\TTverticalbarbelow\TTrightcurl	óu			+1
+\Tuure	u			+1
+\Tuure	w			-1
+\Tverticalbarbelow				+1
+\Tvilya\TTdoubler	á		
+\Tvilya	a		
+\Tvala	w			+1
+\Tvala\TTdoubler	ú			-1
+\Tvala	ü	\\T(yanta|telco)	\\Tungwe(\\TTnasalizer)?	-1
+\Tvala	u			-1
+\Tyanta\TTthreedots	ai	\\T(T(threedots|(double)?acute|dot|(double)?(right|left)curl|(left)?(tilde|twodotsbelow|verticalbarbelow))|aara)		+1
+\Tyanta\TTverticalbarbelow\TTthreedots	ái			+1
+\Tyanta\TTacute	ei	\\T(T(threedots|(double)?acute|dot|(double)?(right|left)curl|(left)?(tilde|twodotsbelow|verticalbarbelow))|aara)		+1
+\Tyanta\TTdoubleacute	éi			+1
+\Tyanta\TTverticalbarbelow\TTacute	éi			+1
+\Tyanta\TTrightcurl	oi	\\T(T(threedots|(double)?acute|dot|(double)?(right|left)curl|(left)?(tilde|twodotsbelow|verticalbarbelow))|aara)		+1
+\Tyanta\TTdoublerightcurl	ói			+1
+\Tyanta\TTverticalbarbelow\TTrightcurl	ói			+1
+\Tyanta\TTleftcurl	ui	\\T(T(threedots|(double)?acute|dot|(double)?(right|left)curl|(left)?(tilde|twodotsbelow|verticalbarbelow))|aara)		+1
+\Tyanta\TTdoubleleftcurl	úi			+1
+\Tyanta\TTverticalbarbelow\TTleftcurl	úi			+1
+\Tyanta\TTthreedots	ay			+1
+\Tyanta\TTacute	ey			+1
+\Tyanta\TTrightcurl	oy			+1
+\Tyanta\TTleftcurl	uy			+1
+\Tyanta	i		\\Taara\\TT\w*	+1
+\Tyanta	i	\\T(T(threedots|(double)?acute|dot|(double)?(right|left)curl|(left)?(tilde|twodotsbelow|verticalbarbelow))|aara)		+1
+\Tyanta	y			+1
+\Tyanta\TTdoubler	é			-1
+\Tyanta	e			-1
+\TTlefttilde	ü	(\\T(yanta|uure))?(\\T(Tverticalbarbelow|aara))?\\TT((double)?acute|dot|(left)?twodotsbelow)	\\Tungwe(\\TTnasalizer)?	+1
+\TTlefttilde	u		
+\TTlefttwodotsbelow	i		
+\TTtilde	ü	(\\T(yanta|uure))?(\\T(Tverticalbarbelow|aara))?\\TT((double)?acute|dot|(left)?twodotsbelow)	\\Tungwe(\\TTnasalizer)?	+1
+\TTtilde	ü	\\T(yanta|telco)	\\Tungwe(\\TTnasalizer)?	-1
+\TTtilde	u		
+\TTtwodotsbelow	i		
+\TTtwodots	i		\\TTdoubler
+\TTtwodots	y	(\\Ts[\W\d]|\\\\| $)	
+\TTtwodots	i		
+\TTverticalbarbelow\TTthreedots	á		
+\TTverticalbarbelow\TTacute	é		
+\TTverticalbarbelow\TTdot	í		
+\TTverticalbarbelow\TTrightcurl	ó		
+\TTverticalbarbelow\TTleftcurl	ú		
+\TTdoubleacute	é		
+\TTdoublerightcurl	ó		
+\TTdoubleleftcurl	ú		
+\TTthreedots	a		
+\TTacute	e		
+\TTdot	i		
+\TTrightcurl	o		
+\TTleftcurl	ü	(\\T(yanta|uure))?(\\T(Tverticalbarbelow|telco|aara))?\\TT((double)?acute|dot|(left)?twodotsbelow)	\\Tungwe(\\TTnasalizer)?	+1
+\TTleftcurl	u		
+\TTcaron	y		
+#===
+#digit	dec	duodec	least
+00	\Tzero\TTdecimal	\Tzero\TTduodecimal	\Tzero\TTleastsignificant
+01	\Tone\TTdecimal	\Tone\TTduodecimal	\Tone\TTleastsignificant
+02	\Ttwo\TTdecimal	\Ttwo\TTduodecimal	\Ttwo\TTleastsignificant
+03	\Tthree\TTdecimal	\Tthree\TTduodecimal	\Tthree\TTleastsignificant
+04	\Tfour\TTdecimal	\Tfour\TTduodecimal	\Tfour\TTleastsignificant
+05	\Tfive\TTdecimal	\Tfive\TTduodecimal	\Tfive\TTleastsignificant
+06	\Tsix\TTdecimal	\Tsix\TTduodecimal	\Tsix\TTleastsignificant
+07	\Tseven\TTdecimal	\Tseven\TTduodecimal	\Tseven\TTleastsignificant
+08	\Teight\TTdecimal	\Teight\TTduodecimal	\Teight\TTleastsignificant
+09	\Tnine\TTdecimal	\Tnine\TTduodecimal	\Tnine\TTleastsignificant
+10		\Tten\TTduodecimal	\Tten\TTleastsignificant
+11		\Televen\TTduodecimal	\Televen\TTleastsignificant
